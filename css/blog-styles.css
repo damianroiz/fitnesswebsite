@@ -111,7 +111,6 @@ body {
   background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
   border-radius: 0.8rem;
   text-decoration: none;
-  float: right;
 }
 
 .blog-post__cta:hover {
