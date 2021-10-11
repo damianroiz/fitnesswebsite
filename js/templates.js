@@ -10,10 +10,10 @@ class MyMenu extends HTMLElement {
         <ul>
             <li class="logo">Damian Roiz</li>
             <li class="items"><a href="index.html">Home</a></li>
-            <li class="items"><a href="#about">About</a></li>
-            <li class="items"><a href="#services">Services</a></li>
+            <li class="items"><a href="index.html#about">About</a></li>
+            <li class="items"><a href="index.html#services">Services</a></li>
             <li class="items"><a href="blog.html">Blog</a></li>
-            <li class="items"><a href="membership.html">Members</a></li>
+            <li class="items"><a href="#newsletter">Newsletter</a></li>
             <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>    
         </ul>
     </nav>
@@ -57,7 +57,7 @@ class MyFooter extends HTMLElement {
                 </div>
             </div>
         </div>
-        <div class="right box">
+        <div class="right box" id="newsletter">
             <h2>Join the Newsletter</h2>
             <div class="content">
                 <form action="#">
@@ -86,6 +86,16 @@ class MyFooter extends HTMLElement {
 }
 
 customElements.define('my-footer', MyFooter)
+
+// slick carousel 
+
+$('.post-wrapper').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  nextArrow: $('.next'),
+  prevArrow: $('.prev')
+});
 
 
 
