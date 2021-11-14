@@ -1,7 +1,12 @@
 /*
+
+NAV BAR
+font-family: 'Open Sans', sans-serif;
+
+
 font-family: 'Raleway', sans-serif; (600)
 font-family: 'Lato', sans-serif; (300, 400)
-font-family: 'Open Sans', sans-serif;
+
 font-family: 'Poppins', sans-serif;
 
 colors: 
@@ -117,30 +122,6 @@ nav ul li.btn.hide i:before {
   content: "\f00d";
 }
 
-@media all and (max-width: 900px) {
-  nav {
-    padding: 5px 30px;
-  }
-  nav ul li.items {
-    width: 100%;
-    display: none;
-  }
-  nav ul li.items.show {
-    display: block;
-  }
-  nav ul li.btn {
-    display: block;
-  }
-
-  nav ul li.items:hover {
-    border-radius: 5px;
-    box-shadow: inset 0 0 5px #1e90ff, inset 0 0 10px #3f9efc;
-  }
-  nav ul li.items:hover:after {
-    opacity: 0;
-  }
-}
-
 /* main section */
 
 main {
@@ -150,7 +131,7 @@ main {
   flex-wrap: wrap;
   width: auto;
   height: 700px;
-  background-image: url('/Users/damiancoz/Sites/damianroiz/img/background.png');
+  background-image: url("/img/background.png");
   background-position: center;
   background-size: cover;
   min-width: 900px;
@@ -208,7 +189,7 @@ h4 {
   height: 70px;
 }
 
-/* about section */
+/* ABOUT SECTION */
 
 section.about {
   min-height: 50vh;
@@ -231,15 +212,15 @@ section.about {
   min-width: 40%;
   width: 550px;
   height: 700px;
-  background: url('/Users/damiancoz/Sites/damianroiz/img/about-image.png') no-repeat center / cover;
-  background-position: -100px 0;
-  transform: scalex(-1);
+  background: url("/img/about.png") no-repeat center / cover;
+  background-position: -10px 0;
+  /* transform: scalex(-1); */
   border-radius: 8px;
   transition: 1s;
 }
 
 .about-left:hover {
-  background-position: -110px -10px;
+  background-position: -0px -10px;
   /* background-position: center; */
 }
 
@@ -337,7 +318,7 @@ section.about {
   letter-spacing: px;
 }
 
-/* service area */
+/* SERVICE AREA */
 
 .service-container {
   display: flex;
@@ -355,7 +336,6 @@ section.about {
   flex-direction: column;
   justify-content: flex-end;
   background-color: #303036;
-  background-image: url('/Users/damiancoz/Sites/damianroiz/img/kettlebell-programs.png');
   background-size: cover;
   width: 300px;
   height: 550px;
@@ -364,6 +344,18 @@ section.about {
   border-radius: 8px;
   overflow: hidden;
   transition: transform 500ms ease-in;
+}
+
+.service-card.kettlebell {
+  background-image: url("/img/kb-programs.png");
+}
+
+.service-card.bodyweight {
+  background-image: url("/img/bodyweight.png");
+}
+
+.service-card.nutrition {
+  background-image: url("/img/nutrition.png");
 }
 
 .service-card:hover,
@@ -485,6 +477,7 @@ footer {
   bottom: 0px;
   width: 100%;
   background: #303036;
+  grid-area: footer;
 }
 
 .main-content {
@@ -497,7 +490,7 @@ footer {
 }
 
 .box h2 {
-  font-size: 19px ;
+  font-size: 19px;
   font-weight: 600;
   text-transform: uppercase;
   color: #1e90ff;
@@ -650,10 +643,35 @@ footer {
   transition: 0.3s;
 }
 
+@media all and (max-width: 900px) {
+  nav {
+    padding: 5px 30px;
+  }
+  nav ul li.items {
+    width: 100%;
+    display: none;
+  }
+  nav ul li.items.show {
+    display: block;
+  }
+  nav ul li.btn {
+    display: block;
+  }
+
+  nav ul li.items:hover {
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px #1e90ff, inset 0 0 10px #3f9efc;
+  }
+  nav ul li.items:hover:after {
+    opacity: 0;
+  }
+}
+
 @media screen and (max-width: 900px) {
   footer {
     position: relative;
     bottom: 0px;
+    flex: 0;
   }
   .main-content {
     flex-wrap: wrap;
