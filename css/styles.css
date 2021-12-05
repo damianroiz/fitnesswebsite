@@ -30,7 +30,7 @@ Links: #6875ff
   --fw-400: 400;
   --fw-600: 600;
 
-  --clr-primary-200: #e0e3f0;
+  --clr-section-background: #e0e3f0;
   --blue-primary: #1e90ff;
   --btn-hover: #0d4171;
   --btn-subscribe: #159f13;
@@ -220,7 +220,7 @@ section,
 nav {
   background: var(--secondary-dark);
   padding: 5px 40px;
-  height: 100px;
+  height: 90px;
 }
 
 nav ul.nav-bar {
@@ -230,6 +230,7 @@ nav ul.nav-bar {
   align-content: center;
   list-style: none;
   max-height: auto;
+  padding-top: 20px;
 }
 
 nav ul.nav-bar li {
@@ -246,6 +247,7 @@ nav ul.nav-bar li.logo {
   font-weight: var(--fw-400);
   cursor: default;
   user-select: none;
+  padding-left: 40px;
 }
 
 nav ul.nav-bar li.items {
@@ -498,9 +500,9 @@ section.about {
   margin-top: 100px;
   height: 40px;
   width: 180px;
-  border: none;
+  border: 2p solid var(--blue-primary);
   outline: none;
-  background: #1e90ff;
+  background: var(--blue-primary);
   border-radius: 5px;
   font-size: 1.0625rem;
   font-weight: 500;
@@ -508,23 +510,36 @@ section.about {
   transition: 0.3s;
 }
 
-.about-right button:hover {
-  background: #91c8ff;
-}
-
-.about-right button:hover a {
-  color: #151515;
+.about-right button:hover,
+.about-right button:focus {
+  background-color: transparent;
+  color: var(--blue-primary);
+  border: 2px solid var(--blue-primary);
 }
 
 .about-right a {
   text-decoration: none;
   color: #fff;
-  letter-spacing: px;
+  letter-spacing: 1px;
+  display: block;
+  width: 100%;
+}
+
+.about-right a:hover,
+.about-right a:focus {
+  text-decoration: none;
+  color: var(--blue-primary);
+  letter-spacing: 1px;
 }
 
 /* //////////////////////
   Service Area
   /////////////////////// */
+
+.service-section {
+  background: var(--clr-section-background);
+  margin-top: 0;
+}
 
 .service-container {
   display: flex;
@@ -533,7 +548,6 @@ section.about {
   gap: 25px;
   align-items: center;
   align-content: center;
-  margin: 50px 0;
   /* padding-right: 15em; */
 }
 
@@ -636,7 +650,7 @@ section.about {
 
 .service-button:hover,
 .service-button:focus {
-  background-color: var(--clr-primary-200);
+  background-color: transparent;
   color: var(--blue-primary);
   border: 2px solid var(--blue-primary);
 }
@@ -825,8 +839,9 @@ footer {
 }
 
 .right form .subscribe-btn button:hover {
-  background: var(--btn-subscribe-hover);
-  color: var(--main-white);
+  background: transparent;
+  color: var(--btn-subscribe);
+  border: 2px solid var(--btn-subscribe);
 }
 
 .bottom {
