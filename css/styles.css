@@ -13,13 +13,46 @@ Links: #6875ff
 
 */
 
-html {
-  box-sizing: border-box;
-  --light-dark: #303036;
-  --dark-border: #151515;
-  --buttons-and-headings: #1e90ff;
-  --text: #f6f5f5;
+@import url(https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Open+Sans&family=Poppins&family=Raleway:wght@600&display=swap);
+
+:root {
+  --fs-300: 0.9375rem;
+  --fs-400: 1.0625rem;
+  --fs-500: 1.375rem;
+  --fs-600: 1.875rem;
+  --fs-700: 2rem;
+
+  --ff-nav: "open-sans", sans-serif;
+  --ff-body: "lato", sans-serif;
+  --ff-button: "poppings", sans-serif;
+  --ff-heading: "Raleway", sans-serif;
+
+  --fw-400: 400;
+  --fw-600: 600;
+
+  --clr-primary-200: #e0e3f0;
+  --blue-primary: #1e90ff;
+  --btn-hover: #0d4171;
+  --btn-subscribe: #159f13;
+  --btn-subscribe-hover: #117e0f;
+
+  --main-white: #f8f5f5;
+  --main-text-black: #272b2e;
+  --secondary-dark: #303036;
+  --primary-dark: #151515;
 }
+
+@media (min-width: 35em) {
+  :root {
+    --fs-300: 1rem;
+    --fs-400: 1.125rem;
+    --fs-500: 1.5rem;
+    --fs-600: 2.25rem;
+    --fs-700: 3rem;
+  }
+}
+
+/* Box sizing rules */
 
 *,
 *:before,
@@ -29,91 +62,239 @@ html {
   padding: 0;
 }
 
-html,
-body {
-  background-color: #f2f2f2;
-  height: 100%;
-  padding: 0px;
-  margin: 0px;
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
 }
 
-/* navigation bar */
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul:where([role="list"]),
+ol:where([role="list"]) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+textarea,
+select {
+  font: var(--ff-body);
+}
+
+button {
+  font: var(--ff-button);
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* //////////////////////
+  General styling
+  /////////////////////// */
+
+body {
+  font-family: var(--ff-body);
+  font-size: var(--fs-400);
+  color: var(--primary-dark);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-600);
+  line-height: 1.1;
+}
+
+strong {
+  font-weight: var(--fw-600);
+}
+
+section,
+.section {
+  padding: min(10vh, 10em) 0;
+}
+
+/* //////////////////////
+  Utility Classes
+  /////////////////////// */
+
+/* select all direct childen of .flow
+   and add margin to the top for proper
+   spacing */
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-spacer, 1em);
+}
+
+.container {
+  margin-inline: auto;
+  padding-inline: 1.5em;
+  max-width: 72rem;
+}
+
+.container--narrow {
+  max-width: 65rem;
+}
+
+.flex-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap, 1em);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* typgraphy */
+
+.article-title,
+.section-title {
+  color: var(--btn-hover);
+}
+
+.article-title {
+  font-size: var(--fs-600);
+}
+
+.section-title {
+  font-size: var(--fs-600);
+}
+
+/* //////////////////////
+  Header
+  /////////////////////// */
 
 nav {
-  background: #303036;
+  background: var(--secondary-dark);
   padding: 5px 40px;
+  height: 100px;
 }
 
-nav ul {
+nav ul.nav-bar {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-content: center;
   list-style: none;
+  max-height: auto;
 }
 
-nav ul li {
-  padding: 15px 0;
+nav ul.nav-bar li {
   cursor: pointer;
+  align-self: center;
 }
 
-nav ul li.logo {
+nav ul.nav-bar li.logo {
   flex: 1;
-  color: #fff;
-  font-family: "Open Sans", sans-serif;
+  color: var(--main-white);
+  font-family: var(--ff-nav);
   letter-spacing: 1px;
-  font-size: 23px;
-  font-weight: 600;
+  font-size: var(--fs-600);
+  font-weight: var(--fw-400);
   cursor: default;
   user-select: none;
 }
 
-nav ul li.items {
+nav ul.nav-bar li.items {
   position: relative;
   width: auto;
   margin: 0 16px;
   text-align: center;
   order: 3;
-  font-family: "Lato", sans-serif;
+  font-family: var(--ff-nav);
   letter-spacing: 1px;
 }
 
-nav ul li.items:after {
+nav ul.nav-bar li.items:after {
   position: absolute;
   content: "";
   left: 0;
   bottom: 5px;
   height: 2px;
   width: 100%;
-  background: #1e90ff;
+  background: var(--blue-primary);
   opacity: 0;
-  transition: all 0.2s linear;
+  transition: all 0.2s ease-out;
 }
 
-nav ul li.items:hover:after {
+nav ul.nav-bar li.items:hover:after {
   opacity: 1;
-  bottom: 8px;
+  bottom: -8px;
 }
 
-nav ul li a {
-  color: #fff;
-  font-size: 18px;
+nav ul.nav-bar li a {
+  color: var(--main-white);
+  font-size: var(--fs-300);
   text-decoration: none;
   transition: 0.4s;
 }
 
-nav ul li:hover a {
-  color: #1e90ff;
+nav ul.nav-bar li:hover a {
+  color: var(--blue-primary);
 }
 
-nav ul li i {
+nav ul.nav-bar li i {
   font-size: 23px;
 }
 
-nav ul li.btn {
+nav ul.nav-bar li.btn {
   display: none;
 }
 
-nav ul li.btn.hide i:before {
+nav ul.nav-bar li.btn.hide i:before {
   content: "\f00d";
 }
 
@@ -121,27 +302,29 @@ nav ul li.btn.hide i:before {
   nav {
     padding: 5px 30px;
   }
-  nav ul li.items {
+  nav ul.nav-bar li.items {
     width: 100%;
     display: none;
   }
-  nav ul li.items.show {
+  nav ul.nav-bar li.items.show {
     display: block;
   }
-  nav ul li.btn {
+  nav ul.nav-bar li.btn {
     display: block;
   }
 
-  nav ul li.items:hover {
+  nav ul.nav-bar li.items:hover {
     border-radius: 5px;
-    box-shadow: inset 0 0 5px #1e90ff, inset 0 0 10px #3f9efc;
+    box-shadow: inset 0 0 5px var(--blue-primary), inset 0 0 10px #3f9efc;
   }
-  nav ul li.items:hover:after {
+  nav ul.nav-bar li.items:hover:after {
     opacity: 0;
   }
 }
 
-/* main section */
+/* //////////////////////
+  Main 
+  /////////////////////// */
 
 main {
   display: flex;
@@ -150,7 +333,7 @@ main {
   flex-wrap: wrap;
   width: auto;
   height: 700px;
-  background-image: url('/Users/damiancoz/Sites/damianroiz/img/background.png');
+  background-image: url("/img/background.png");
   background-position: center;
   background-size: cover;
   min-width: 900px;
@@ -208,7 +391,9 @@ h4 {
   height: 70px;
 }
 
-/* about section */
+/* //////////////////////
+  About
+  /////////////////////// */
 
 section.about {
   min-height: 50vh;
@@ -231,7 +416,7 @@ section.about {
   min-width: 40%;
   width: 550px;
   height: 700px;
-  background: url('/Users/damiancoz/Sites/damianroiz/img/about-image.png') no-repeat center / cover;
+  background: url("/img/about-image.png") no-repeat center / cover;
   background-position: -100px 0;
   transform: scalex(-1);
   border-radius: 8px;
@@ -262,7 +447,7 @@ section.about {
 @media only screen and (max-width: 900px) {
   .about-container {
     flex-direction: column;
-    wrap: wrap;
+    flex-wrap: wrap;
     overflow-y: auto;
   }
 
@@ -337,7 +522,9 @@ section.about {
   letter-spacing: px;
 }
 
-/* service area */
+/* //////////////////////
+  Service Area
+  /////////////////////// */
 
 .service-container {
   display: flex;
@@ -355,7 +542,7 @@ section.about {
   flex-direction: column;
   justify-content: flex-end;
   background-color: #303036;
-  background-image: url('/Users/damiancoz/Sites/damianroiz/img/kettlebell-programs.png');
+  background-image: url(/img/kettlebell-programs.png);
   background-size: cover;
   width: 300px;
   height: 550px;
@@ -364,6 +551,21 @@ section.about {
   border-radius: 8px;
   overflow: hidden;
   transition: transform 500ms ease-in;
+}
+
+.kettlebell {
+  background-image: url(/img/kettlebell-programs.png);
+  background-size: cover;
+}
+
+.bodyweight {
+  background-image: url(/img/bodyweight.png);
+  background-size: cover;
+}
+
+.nutrition {
+  background-image: url(/img//nutrition.png);
+  background-size: cover;
 }
 
 .service-card:hover,
@@ -385,7 +587,7 @@ section.about {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   letter-spacing: 1px;
-  color: #fff;
+  color: var(--main-white);
   font-size: 30px;
   margin: 20px 0px;
 }
@@ -415,15 +617,19 @@ section.about {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
-  color: var(--text);
+  color: var(--main-white);
 }
 
 .service-button {
   cursor: pointer;
   display: inline;
+  font-family: var(--ff-button);
+  font-size: var(--fs-300);
+  letter-spacing: 0.5px;
   text-decoration: none;
-  color: var(--text);
-  background-color: rgb(2, 172, 113);
+  color: var(--main-white);
+  background-color: var(--blue-primary);
+  border: 2px solid var(--blue-primary);
   padding: 0.5em 1.25em;
   border-radius: 5px;
   float: right;
@@ -432,8 +638,9 @@ section.about {
 
 .service-button:hover,
 .service-button:focus {
-  background-color: hsl(142, 90%, 61%);
-  color: var(--dark-border);
+  background-color: var(--clr-primary-200);
+  color: var(--blue-primary);
+  border: 2px solid var(--blue-primary);
 }
 
 @media (prefers-reduce-motion: reduce) {
@@ -478,7 +685,9 @@ section.about {
   }
 }
 
-/* footer section */
+/* //////////////////////
+  Footer
+  /////////////////////// */
 
 footer {
   position: relative;
@@ -497,15 +706,15 @@ footer {
 }
 
 .box h2 {
-  font-size: 19px ;
+  font-size: 19px;
   font-weight: 600;
   text-transform: uppercase;
-  color: #1e90ff;
+  color: var(--blue-primary);
 }
 
 .box .content {
   margin: 20px 0 0 0;
-  color: #f6f5f5;
+  color: var(--main-white);
   position: relative;
 }
 
@@ -523,7 +732,7 @@ footer {
   content: "";
   height: 2px;
   width: 15%;
-  background: #1e90ff;
+  background: var(--blue-primary);
   top: -10px;
 }
 
@@ -546,7 +755,7 @@ footer {
   line-height: 40px;
   text-align: center;
   font-size: 18px;
-  color: #f6f5f5;
+  color: var(--main-white);
   border-radius: 5px;
   transition: 0.3s;
   margin-right: 8px;
@@ -555,11 +764,11 @@ footer {
 }
 
 .center .content .social a span:hover {
-  background: #1e90ff;
+  background: var(--blue-primary);
 }
 
 .center .content .fas:hover {
-  background: #1e90ff;
+  background: var(--blue-primary);
 }
 
 .center .content .text {
@@ -571,7 +780,7 @@ footer {
 .right form .field-wrapper {
   font-size: 1.0625rem;
   margin-bottom: 2px;
-  color: #f6f5f5;
+  color: var(--main-white);
 }
 
 .right form .msg {
@@ -581,7 +790,7 @@ footer {
 .right form input {
   width: 100%;
   font-size: 1.0625rem;
-  color: #f6f5f5;
+  color: var(--main-white);
   background: #151515;
   padding-left: 10px;
   border: 1px solid #222222;
@@ -590,7 +799,7 @@ footer {
 }
 
 .right form input:focus {
-  outline-color: #1e90ff;
+  outline-color: var(--blue-primary);
 }
 
 .right form input {
@@ -601,13 +810,15 @@ footer {
   margin-top: 10px;
 }
 
-.right form .btn button {
+.right form .subscribe-btn button {
   height: 40px;
   width: 100%;
   border: none;
   outline: none;
-  color: #f6f5f5;
-  background: #1e90ff;
+  font: var(--ff-button);
+  letter-spacing: 0.5px;
+  color: var(--main-white);
+  background: var(--btn-subscribe);
   border-radius: 5px;
   font-size: 1.0625rem;
   font-weight: 500;
@@ -615,9 +826,9 @@ footer {
   transition: 0.3s;
 }
 
-.right form .btn button:hover {
-  background: #91c8ff;
-  color: #151515;
+.right form .subscribe-btn button:hover {
+  background: var(--btn-subscribe-hover);
+  color: var(--main-white);
 }
 
 .bottom {
@@ -628,7 +839,7 @@ footer {
 }
 
 .bottom p {
-  color: #f6f5f5;
+  color: var(--main-white);
   text-decoration: none;
   text-align: center;
   letter-spacing: 0.05rem;
