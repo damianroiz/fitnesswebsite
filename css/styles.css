@@ -328,39 +328,11 @@ nav ul.nav-bar li.btn.hide i:before {
   Main 
   /////////////////////// */
 
-main {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: auto;
+.welcome {
   height: 700px;
   background-image: url("/img/background.png");
   background-position: center;
   background-size: cover;
-  min-width: 900px;
-  position: relative;
-  padding: 30px;
-}
-
-.main-container {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  align-items: start;
-}
-
-.main-container div {
-  padding-top: 20px;
-}
-
-.box-1 {
-  flex: 2;
-}
-
-.box-2 {
-  flex: 1;
-  order: 2;
 }
 
 h2 {
