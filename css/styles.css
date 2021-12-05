@@ -542,8 +542,6 @@ section.about {
   flex-direction: column;
   justify-content: flex-end;
   background-color: #303036;
-  background-image: url(/img/kettlebell-programs.png);
-  background-size: cover;
   width: 300px;
   height: 550px;
   padding: 10rem 0 0;
@@ -564,7 +562,7 @@ section.about {
 }
 
 .nutrition {
-  background-image: url(/img//nutrition.png);
+  background-image: url(/img/nutrition.png);
   background-size: cover;
 }
 
