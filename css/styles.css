@@ -329,10 +329,22 @@ nav ul.nav-bar li.btn.hide i:before {
   /////////////////////// */
 
 .welcome {
+  position: relative;
   height: 700px;
   background-image: url("/img/background.png");
   background-position: center;
   background-size: cover;
+}
+
+.welcome p {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  right: 0;
+  margin: 20px 50px;
+  font-size: 3em;
+  color: var(--clr-section-background);
+  letter-spacing: 0.5px;
 }
 
 h2 {

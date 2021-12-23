@@ -1,154 +1,203 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
     <script
-			  src="https://code.jquery.com/jquery-3.6.0.js"
-			  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-			  crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Open+Sans&family=Poppins&family=Raleway:wght@600&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Open+Sans&family=Poppins&family=Raleway:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/c8e4d183c2.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Damian Roiz</title>
+  </head>
 
-    
-</head>
+  <body>
+    <!-- Main Menu------------------------------------------------->
 
-
-<body>
-
-<!-- Main Menu-------------------------------------------------> 
-
-<header>     
-    <nav>
+    <header>
+      <nav>
         <ul class="nav-bar">
-            <li class="logo">Damian Roiz</li>
-            <li class="items"><a href="index.html">Home</a></li>
-            <li class="items"><a href="index.html#about">About</a></li>
-            <li class="items"><a href="index.html#services">Services</a></li>
-            <li class="items"><a href="https://damianroiz-blog.netlify.app/">Blog</a></li>
-            <li class="items"><a href="#newsletter">Newsletter</a></li>
-            <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>    
+          <li class="logo">Damian Roiz</li>
+          <li class="items"><a href="index.html">Home</a></li>
+          <li class="items"><a href="index.html#about">About</a></li>
+          <li class="items"><a href="index.html#services">Services</a></li>
+          <li class="items">
+            <a href="https://damianroiz-blog.netlify.app/">Blog</a>
+          </li>
+          <li class="items"><a href="#newsletter">Newsletter</a></li>
+          <li class="btn">
+            <a href="#"><i class="fas fa-bars"></i></a>
+          </li>
         </ul>
-    </nav>
+      </nav>
 
-    <script>
-        $(document).ready(function(){
-            $('.btn').click(function(){
-              $('.items').toggleClass('show');
-              $('ul li').toggleClass('hide');
-            });
+      <script>
+        $(document).ready(function () {
+          $(".btn").click(function () {
+            $(".items").toggleClass("show");
+            $("ul li").toggleClass("hide");
+          });
         });
-    </script>
-</header>
+      </script>
+    </header>
 
+    <!--mission statement------------------------------------------>
 
-<!--mission statement------------------------------------------>
-
-   
-    <div class="welcome" >
-        <p>Training OnPoint</p>
+    <div class="welcome">
+      <p>#OnPoint</p>
     </div>
 
+    <!--about section ------------------------------------------>
 
-<!--about section ------------------------------------------>
+    <h2 class="section-title" id="about">About</h2>
 
-<h2 class="section-title" id="about">About</h2>
-
-<section class="about">
-    <div class="about-container">
-        <div class="about-left">
-        </div> 
+    <section class="about">
+      <div class="about-container">
+        <div class="about-left"></div>
         <div class="about-right">
-            <div class="content">
-                <h1>Hello,</h1> 
-                <h2>I'm Damian</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga omnis cumque, autem eum accusantium, assumenda excepturi fugit, velit eius quis modi placeat pariatur mollitia temporibus. Atque nesciunt sapiente placeat a, cupiditate assumenda. Magni praesentium id sint exercitationem molestias dignissimos eveniet.</p>
-                <button ><a href="#">Read more</a></button>
-            </div>
+          <div class="content">
+            <h1>Hello,</h1>
+            <h2>I'm Damian</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+              omnis cumque, autem eum accusantium, assumenda excepturi fugit,
+              velit eius quis modi placeat pariatur mollitia temporibus. Atque
+              nesciunt sapiente placeat a, cupiditate assumenda. Magni
+              praesentium id sint exercitationem molestias dignissimos eveniet.
+            </p>
+            <button><a href="#">Read more</a></button>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!--Services ------------------------------------------>
+    <!--Services ------------------------------------------>
 
-<h2 class="section-title" id="services">Services</h2>
-<section class="service-section">
-<div class="service-container">
-    <div class="service-card kettlebell">
-        <div class="service-content">
+    <h2 class="section-title" id="services">Services</h2>
+    <section class="service-section">
+      <div class="service-container">
+        <div class="service-card kettlebell">
+          <div class="service-content">
             <h3 class="service-heading">Kettlebell Training</h3>
-            <p class="service-body">Effective training programs to make you feel and look good about yourself</p>
+            <p class="service-body">
+              Effective training programs to make you feel and look good about
+              yourself
+            </p>
             <a href="#" class="service-button">Sign Up</a>
+          </div>
         </div>
-    </div>
-    <div class="service-card bodyweight">
-        <div class="service-content">
+        <div class="service-card bodyweight">
+          <div class="service-content">
             <h3 class="service-heading">Bodyweight Training</h3>
-            <p class="service-body">Effective training programs to make you feel and look good about yourself</p>
+            <p class="service-body">
+              Effective training programs to make you feel and look good about
+              yourself
+            </p>
             <a href="#" class="service-button">Sign Up</a>
+          </div>
         </div>
-    </div>
-    <div class="service-card nutrition">
-        <div class="service-content">
+        <div class="service-card nutrition">
+          <div class="service-content">
             <h3 class="service-heading">Nutritional Guides</h3>
-            <p class="service-body">Effective training programs to make you feel and look good about yourself</p>
+            <p class="service-body">
+              Effective training programs to make you feel and look good about
+              yourself
+            </p>
             <a href="#" class="service-button">Sign Up</a>
+          </div>
         </div>
-    </div>
-</div>
-</section>
-<!--footer ------------------------------------------>
+      </div>
+    </section>
+    <!--footer ------------------------------------------>
 
-<footer class="site-footer">
-    <div class="main-content">
+    <footer class="site-footer">
+      <div class="main-content">
         <div class="left box">
-            <h2>About</h2>
-            <div class="content">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam quam voluptatum quo porro ipsam non, corporis eos itaque praesentium expedita neque odit corrupti voluptatibus alias, provident eligendi ea beatae placeat.</p>
-
-            </div>
+          <h2>About</h2>
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam quam
+              voluptatum quo porro ipsam non, corporis eos itaque praesentium
+              expedita neque odit corrupti voluptatibus alias, provident
+              eligendi ea beatae placeat.
+            </p>
+          </div>
         </div>
         <div class="center box">
-            <h2>Follow Damian</h2>
-            <div class="content">
-                <div class="social">
-                    <a href="https://twitter.com/damianroiz" target="_blank"><span class="fab fa-twitter"></span></a>
-                    <a href="https://www.instagram.com/" target="_blank"><span class="fab fa-instagram"></span></a>
-                    <a href="#" target="_blank"><span class="fab fa-youtube"></span></a>
-                </div>
+          <h2>Follow Damian</h2>
+          <div class="content">
+            <div class="social">
+              <a href="https://twitter.com/damianroiz" target="_blank"
+                ><span class="fab fa-twitter"></span
+              ></a>
+              <a href="https://www.instagram.com/" target="_blank"
+                ><span class="fab fa-instagram"></span
+              ></a>
+              <a href="#" target="_blank"
+                ><span class="fab fa-youtube"></span
+              ></a>
             </div>
+          </div>
         </div>
         <div class="right box" id="newsletter">
-            <h2>Join the Newsletter</h2>
-            <div class="content">
-                <form action="#">
-                    <div class="field-wrapper">
-                       <input id="fullname" type="text" name="fullname" placeholder="Enter your name" data-name="fullname" required=""> 
-                    </div>
-                    <div class="field-wrapper">
-                        <input id="email" type="email" name="email" placeholder="Enter your email" data-name="email" required="">    
-                    </div>
-                    <div class="subscribe-btn">
-                        <button type="submit">Subscribe</button>
-                    </div>
-                </form>
-            </div>
-      
+          <h2>Join the Newsletter</h2>
+          <div class="content">
+            <form action="#">
+              <div class="field-wrapper">
+                <input
+                  id="fullname"
+                  type="text"
+                  name="fullname"
+                  placeholder="Enter your name"
+                  data-name="fullname"
+                  required=""
+                />
+              </div>
+              <div class="field-wrapper">
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  data-name="email"
+                  required=""
+                />
+              </div>
+              <div class="subscribe-btn">
+                <button type="submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
         </div>
-    </div>
-    <div class="bottom">
-            <p>Created By<a href="https://damianroiz.github.io/" target="_blank"> Yours Truly</a> |
-                <span class='far fa-copyright'></span> 2020 All rights reserved.</p>  
-            <p><a href="#" class='credit' target="_blank">Terms and Conditions</a><a href="#" target="_blank">Privacy Policy</a></p>                
-    </div>
-</footer>
-
-</body>
-
+      </div>
+      <div class="bottom">
+        <p>
+          Created By<a href="https://damianroiz.github.io/" target="_blank">
+            Yours Truly</a
+          >
+          | <span class="far fa-copyright"></span> 2020 All rights reserved.
+        </p>
+        <p>
+          <a href="#" class="credit" target="_blank">Terms and Conditions</a
+          ><a href="#" target="_blank">Privacy Policy</a>
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
