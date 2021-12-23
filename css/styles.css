@@ -511,9 +511,7 @@ section.about {
 
 .about-btn:hover a,
 .about-btn:focus a {
-  text-decoration: none;
   color: var(--blue-primary);
-  letter-spacing: 1px;
 }
 
 /* //////////////////////
@@ -616,14 +614,9 @@ section.about {
   color: var(--main-white);
 }
 
-.service-button {
+.service-btn {
   cursor: pointer;
   display: inline;
-  font-family: var(--ff-button);
-  font-size: var(--fs-300);
-  letter-spacing: 0.5px;
-  text-decoration: none;
-  color: var(--main-white);
   background-color: var(--blue-primary);
   border: 2px solid var(--blue-primary);
   padding: 0.5em 1.25em;
@@ -632,11 +625,25 @@ section.about {
   margin-top: 30px;
 }
 
-.service-button:hover,
-.service-button:focus {
+.service-btn a {
+  text-decoration: none;
+  font-family: var(--ff-button);
+  font-size: var(--fs-300);
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: var(--main-white);
+}
+
+.service-btn:hover,
+.service-btn:focus {
   background-color: transparent;
   color: var(--blue-primary);
   border: 2px solid var(--blue-primary);
+}
+
+.service-btn:hover a,
+.service-btn:focus a {
+  color: var(--blue-primary);
 }
 
 @media (prefers-reduce-motion: reduce) {
