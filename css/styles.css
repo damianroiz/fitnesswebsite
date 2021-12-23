@@ -494,14 +494,7 @@ section.about {
   transition: 0.3s;
 }
 
-.about-right button:hover,
-.about-right button:focus {
-  background-color: transparent;
-  color: var(--blue-primary);
-  border: 2px solid var(--blue-primary);
-}
-
-.about-right a {
+.about-btn a {
   text-decoration: none;
   color: #fff;
   letter-spacing: 1px;
@@ -509,8 +502,15 @@ section.about {
   width: 100%;
 }
 
-.about-right a:hover,
-.about-right a:focus {
+.about-btn:hover,
+.about-btn:focus {
+  background-color: transparent;
+  color: var(--blue-primary);
+  border: 2px solid var(--blue-primary);
+}
+
+.about-btn:hover a,
+.about-btn:focus a {
   text-decoration: none;
   color: var(--blue-primary);
   letter-spacing: 1px;
