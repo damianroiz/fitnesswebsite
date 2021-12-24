@@ -402,14 +402,15 @@ h4 {
   width: 40%;
   height: 700px;
   background: url("/img/about-image.png") no-repeat center / cover;
-  background-position: -90px 0;
+  background-position: -80px 0px;
   transform: scalex(-1);
   border-radius: 8px;
   transition: 1s;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
 }
 
 .about-left:hover {
-  background-position: -110px -10px;
+  transform: scaleX(-1) scale(1.05);
   background-position: center;
 }
 
@@ -422,7 +423,7 @@ h4 {
   align-items: center;
   justify-content: center;
   padding: 30px;
-  border: 3px solid #151515;
+  border: 2px solid var(--primary-dark);
   border-radius: 8px;
   margin-left: -120px;
   z-index: 1;
@@ -536,6 +537,7 @@ h4 {
   border-radius: 8px;
   overflow: hidden;
   transition: transform 500ms ease-in;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
 }
 
 .kettlebell {
