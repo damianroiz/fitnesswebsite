@@ -32,6 +32,7 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 html,
@@ -44,6 +45,7 @@ body {
 
 /* navigation bar */
 
+<<<<<<< Updated upstream
 nav {
   background: #303036;
   padding: 5px 40px;
@@ -53,6 +55,128 @@ nav ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+=======
+header {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--secondary-dark);
+  color: var(--main-white);
+  padding: 5px 30px;
+  height: 90px;
+}
+
+.logo {
+  font-size: var(--fs-600);
+  text-decoration: none;
+  margin: 15px 0 0 30px;
+  justify-self: center;
+  font-family: var(--ff-nav);
+  font-weight: var(--fw-400);
+  letter-spacing: 1px;
+}
+
+.navbar-items ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-items li a {
+  text-decoration: none;
+  color: var(--main-white);
+  padding: 1rem;
+  display: block;
+}
+
+.navbar-items li:hover a {
+  color: var(--blue-primary);
+}
+
+.navbar-items li.a:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 5px;
+  height: 2px;
+  width: 100%;
+  background: var(--blue-primary);
+  opacity: 0;
+  transition: all 0.2s ease-out;
+}
+
+.navbar-items li:hover:after {
+  opacity: 1;
+  bottom: -8px;
+}
+
+.toggle-button a {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: var(--main-white);
+  border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+  .toggle-button a {
+    display: flex;
+    align-content: center;
+    margin: 20px;
+  }
+  .navbar-items {
+    display: none;
+    width: 100%;
+    background-color: var(--secondary-dark);
+    opacity: 0.9;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px 0px;
+    
+  }
+  .navbar-items ul {
+    flex-direction: column;
+    width: 100%;
+    border: 2px solid var(--blue-primary);
+  }
+
+.lastnavitem {
+  margin-bottom: 5px;
+}
+
+  .navbar-items li {
+    text-align: center;
+  }
+  .navbar-items li a {
+    padding: 0.5rem 1rem;
+    
+  }
+  .navbar-items.active {
+    display: flex;
+  }
+}
+
+/* 
+nav ul.nav-bar {
+>>>>>>> Stashed changes
   list-style: none;
 }
 
@@ -61,11 +185,16 @@ nav ul li {
   cursor: pointer;
 }
 
+<<<<<<< Updated upstream
 nav ul li.logo {
+=======
+li.logo {
+>>>>>>> Stashed changes
   flex: 1;
   color: #fff;
   font-family: "Open Sans", sans-serif;
   letter-spacing: 1px;
+<<<<<<< Updated upstream
   font-size: 23px;
   font-weight: 600;
   cursor: default;
@@ -73,6 +202,16 @@ nav ul li.logo {
 }
 
 nav ul li.items {
+=======
+  font-size: var(--fs-600);
+  
+  user-select: none;
+  cursor: default;
+  padding-left: 40px;
+}
+
+li.items {
+>>>>>>> Stashed changes
   position: relative;
   width: auto;
   margin: 0 16px;
@@ -82,6 +221,7 @@ nav ul li.items {
   letter-spacing: 1px;
 }
 
+<<<<<<< Updated upstream
 nav ul li.items:after {
   position: absolute;
   content: "";
@@ -98,6 +238,11 @@ nav ul li.items:hover:after {
   opacity: 1;
   bottom: 8px;
 }
+=======
+
+
+
+>>>>>>> Stashed changes
 
 nav ul li a {
   color: #fff;
@@ -122,11 +267,48 @@ nav ul li.btn.hide i:before {
   content: "\f00d";
 }
 
+<<<<<<< Updated upstream
 /* main section */
 
 .welcome {
   width: 100%;
   height: 600px;
+=======
+@media all and (max-width: 900px) {
+  nav {
+    padding: 5px 30px;
+  }
+  nav ul.nav-bar li.items {
+    width: 100%;
+    display: none;
+  }
+  nav ul.nav-bar li.items.show {
+    display: block;
+  }
+  nav ul.nav-bar li.btn {
+    display: block;
+  }
+
+  nav ul.nav-bar li.items:hover {
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px var(--blue-primary), inset 0 0 10px #3f9efc;
+  }
+  nav ul.nav-bar li.items:hover:after {
+    opacity: 0;
+  }
+} */
+
+/* //////////////////////
+  Main 
+  /////////////////////// */
+
+.welcome {
+  width: 100%;
+  position: relative;
+  outline: 2px solid red;
+  padding-top: 70px;
+  height: 700px;
+>>>>>>> Stashed changes
   background-image: url("/img/background.png");
   background-position: center;
   background-size: cover;
